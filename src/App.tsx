@@ -1,10 +1,8 @@
-import "./App.css";
-
 function App() {
   return (
     <>
-      <div>
-        <h1>whispie</h1>
+      <div className="flex justify-center">
+        <h1 className="text-4xl font-bold">Whispie</h1>
       </div>
     </>
   );
