@@ -1,29 +1,51 @@
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 function Home() {
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-br from-indigo-100 via-white to-indigo-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
-      <Header />
-      <main className="flex flex-1 flex-col items-center justify-center">
-        <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-10 flex flex-col items-center w-full max-w-2xl">
-          <h1 className="text-5xl font-extrabold text-indigo-700 dark:text-indigo-300 mb-4 tracking-tight">
-            Bem-vindo ao Whispie!
-          </h1>
-          <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 text-center">
-            Converse por voz em salas privadas ou públicas.
-            <br />
-            Crie uma sala, convide amigos e comece a falar!
-          </p>
-          <div className="flex flex-col gap-4 w-full max-w-sm">
-            <button className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition-colors">
-              Criar Sala
-            </button>
-            <button className="bg-white dark:bg-gray-700 border border-indigo-600 dark:border-indigo-400 text-indigo-700 dark:text-indigo-300 font-semibold py-3 px-8 rounded-full shadow transition-colors">
-              Entrar em Sala
-            </button>
-          </div>
-        </div>
-      </main>
+    <div>
+      <div className="min-h-screen flex flex-col bg-[#0d0a07]">
+        <Header />
+        <main className="flex flex-1 flex-col items-center justify-center px-4">
+          <section className="w-full max-w-3xl bg-[#1a1817] rounded-2xl shadow-2xl px-10 py-14 flex flex-col items-center border border-[#d83018]">
+            <h1 className="text-5xl font-extrabold text-[#d83018] mb-4 tracking-tight text-center">
+              Whispie
+            </h1>
+            <p className="text-lg text-[#fdfcce] mb-8 text-center">
+              Speak, connect and create your own voice rooms.
+              <br />
+              Fast, secure and modern voice chat for everyone.
+            </p>
+            <div className="grid grid-cols-2 gap-6 w-full max-w-lg mb-8">
+              <button className="bg-[#d83018] hover:bg-[#f07848] text-white font-semibold py-4 px-6 rounded-xl shadow-lg transition-colors border border-[#f07848]">
+                Create Room
+              </button>
+              <button className="bg-[#3a3232] hover:bg-[#d83018] text-[#fdfcce] font-semibold py-4 px-6 rounded-xl shadow transition-colors border border-[#d83018]">
+                Join Room
+              </button>
+            </div>
+            <div className="flex flex-row gap-4 mb-4">
+              <button className="bg-[#3a3232] hover:bg-[#d83018] text-[#fdfcce] font-semibold py-2 px-6 rounded-xl shadow transition-colors border border-[#d83018]">
+                Settings
+              </button>
+              <button className="bg-[#d83018] hover:bg-[#f07848] text-white font-semibold py-2 px-6 rounded-xl shadow transition-colors border border-[#f07848]">
+                About
+              </button>
+              <button className="bg-[#fdfcce] hover:bg-[#c0d8d8] text-[#d83018] font-semibold py-2 px-6 rounded-xl shadow transition-colors border border-[#d83018]">
+                Help
+              </button>
+            </div>
+            <div className="mt-6 text-center text-[#c0d8d8] text-sm">
+              <span>
+                Your voice, your space.
+                <br />
+                Modern voice chat for creative people.
+              </span>
+            </div>
+          </section>
+        </main>
+      </div>
+      <Footer />
     </div>
   );
 }
