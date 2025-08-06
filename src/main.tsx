@@ -3,11 +3,12 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import Home from "./pages/Home.tsx";
 import Download from "./pages/Download.tsx";
+import LoginPage from "./pages/LoginPage.tsx";
+import Settings from "./pages/Settings.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <Home />
-    <Download />
+    <LoginPage />
   </StrictMode>
 );
 

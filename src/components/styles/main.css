@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,900;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap");
+
+.mainFont {
+  font-family: Roboto, sans serif;
+}
+
+.secFont {
+  font-family: Arimo;
+  font-size: 14px;
+  font-weight: lighter;
+}
