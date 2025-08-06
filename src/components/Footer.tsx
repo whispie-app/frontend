@@ -1,4 +1,5 @@
 import { FaGithub, FaTwitter, FaInstagram, FaArrowUp } from "react-icons/fa";
+import "../components/styles/main.css";
 
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -6,17 +7,11 @@ function scrollToTop() {
 
 function Footer() {
   return (
-    <footer
-      className="w-full border-t-2 border-[#d83218] pt-10 pb-6 px-4"
-      style={{
-        background:
-          "linear-gradient(70deg, #0d0a07 0%, #181616 20%, #992716 70%, #d83018 100%)",
-      }}
-    >
+    <footer className="w-full  pt-10 pb-6 px-4 bg-[#7b1926] ">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
         {/* Branding & Contact */}
         <div className="flex flex-col gap-3">
-          <span className="text-2xl font-extrabold text-[#fdfcce] mb-2">
+          <span className="text-2xl font-extrabold mainFont text-[#fdfcce] mb-2">
             Whispie
           </span>
           <span className="text-sm text-[#fdfcce]">
@@ -91,7 +86,7 @@ function Footer() {
           </div>
           <button
             onClick={scrollToTop}
-            className="flex items-center gap-2 px-4 py-2 bg-[#f07848] hover:bg-[#d83018] text-white rounded-xl text-sm shadow transition-colors"
+            className="flex items-center gap-2 px-4 py-2 bg-[#f07848] hover:bg-[#7b1926] text-white rounded-xl text-sm shadow transition-colors"
             aria-label="Back to top"
           >
             <FaArrowUp /> Back to top
