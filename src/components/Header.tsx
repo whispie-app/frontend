@@ -5,7 +5,6 @@ import "./styles/main.css";
 function Header() {
   const [open, setOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
-  const [fixedDownload, setFixedDownload] = useState(false);
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -25,19 +24,6 @@ function Header() {
     };
   }, [open]);
 
-  // Fix Download button on scroll
-  useEffect(() => {
-    function handleScroll() {
-      if (window.scrollY > 80) {
-        setFixedDownload(true);
-      } else {
-        setFixedDownload(false);
-      }
-    }
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
     <header className="w-full bg-[#161616] border-[#7b1926]">
       <div className="flex justify-between items-center max-w-6xl mx-auto py-3 px-6">
@@ -47,22 +33,22 @@ function Header() {
           </span>
         </div>
         <div className="flex gap-15 align-middle items-center">
-          <nav className="flex gap-15 items-center font-[roboto]">
+          <nav className="flex gap-15 items-center font-extrabold font-[roboto]">
             <a
               href="#"
-              className="text-[#fdfcce] uppercase text-base font-medium hover:text-[#7b1926] transition-colors"
+              className="text-[#fdfcce] text-base font-medium hover:text-[#7b1926] transition-colors"
             >
               Home
             </a>
             <a
               href="#"
-              className="text-[#fdfcce] uppercase text-base font-medium hover:text-[#7b1926] transition-colors"
+              className="text-[#fdfcce] text-base font-medium hover:text-[#7b1926] transition-colors"
             >
               About
             </a>
             <a
               href="#"
-              className="text-[#fdfcce] uppercase text-base font-medium hover:text-[#7b1926] transition-colors"
+              className="text-[#fdfcce] text-base font-medium hover:text-[#7b1926] transition-colors"
             >
               Help
             </a>

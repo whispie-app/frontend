@@ -11,7 +11,7 @@ function Footer() {
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
         {/* Branding & Contact */}
         <div className="flex flex-col gap-3">
-          <span className="text-2xl font-extrabold mainFont text-[#fdfcce] mb-2">
+          <span className="text-2xl font-semibold italic font-[Georgia] text-[#fdfcce] mb-2">
             Whispie
           </span>
           <span className="text-sm text-[#fdfcce]">
@@ -33,7 +33,7 @@ function Footer() {
           <span className="text-[#fdfcce] font-semibold mb-2">Links</span>
           <a
             href="#"
-            className="text-[#fdfcce] hover:text-[#f07848] text-sm transition-colors"
+            className="text-[#fdfcce] hover:text-[#ff6e6e] text-sm transition-colors"
           >
             Terms of Service
           </a>
