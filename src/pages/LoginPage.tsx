@@ -1,13 +1,14 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import "../components/styles/main.css";
 
 function LoginPage() {
   return (
     <div>
       <Header />
-      <div className="flex items-center justify-center h-200 bg-[#161616]">
+      <div className="flex items-center justify-center h-200 bg-[#161616] max-h-full">
         <div className="bg-gradient-to-b from-[#161616] to-[#111111] max-w-3xl rounded-4xl px-8  py-10 flex flex-col items-center border-1  border-[#222222]">
-          <h2 className="text-5xl font-semibold italic font-[Georgia] text-[#7b1926] mb-6 text-center">
+          <h2 className="text-5xl font-semibold secFont text-[#7b1926] mb-6 text-center">
             Sign In
           </h2>
           <form className="w-100">
@@ -57,7 +58,7 @@ function LoginPage() {
             <div className="flex flex-col items-center gap-4">
               <button
                 type="submit"
-                className="text-white w-full bg-[#7b1926] focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+                className="text-white w-full bg-[#7b1926] focus:ring-4 focus:outline-none hover:bg-[#530101] focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
               >
                 Login
               </button>
