@@ -27,18 +27,18 @@ function Header() {
   return (
     <header className="w-full bg-[#161616] border-[#7b1926]">
       <div className="flex justify-between items-center max-w-6xl mx-auto py-3 px-6">
-        <div className="flex items-center gap-2">
+        <a href="/" className="flex items-center gap-2">
           <span className="text-3xl font-extrabold text-[#7b1926] mainFont tracking-tight">
             <img src="src\assets\images\whispie.png" className="w-10" alt="" />
           </span>
-        </div>
+        </a>
         <div className="flex gap-15 align-middle items-center">
           <nav className="flex gap-15 items-center font-extrabold font-[roboto]">
             <a
-              href="#"
+              href="/download"
               className="text-[#fdfcce] text-base font-medium hover:text-[#7b1926] transition-colors"
             >
-              Home
+              Download
             </a>
             <a
               href="#"

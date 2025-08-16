@@ -171,7 +171,7 @@ function CreateAccount() {
                 <p className="text-sm font-light text-gray-400">
                   Already have an account?{" "}
                   <a
-                    href="#"
+                    href="/login"
                     className="font-medium text-primary-600 hover:underline"
                   >
                     Login here
