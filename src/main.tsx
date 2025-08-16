@@ -4,7 +4,6 @@ import "./index.css";
 import Home from "./pages/Home.tsx";
 import Download from "./pages/Download.tsx";
 import LoginPage from "./pages/LoginPage.tsx";
-import Settings from "./pages/Settings.tsx";
 import CreateAccount from "./pages/CreateAccount.tsx";
 
 createRoot(document.getElementById("root")!).render(
