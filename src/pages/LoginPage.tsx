@@ -4,6 +4,9 @@ import "../components/styles/main.css";
 
 function LoginPage() {
   return (
+    // TODO: Keep consistent with register page (create a shared form layout eventually)
+    // TODO: Add animation
+    // TODO: Add form validation
     <div>
       <Header />
       <div className="flex items-center justify-center h-200 bg-[#161616] max-h-full">
@@ -82,6 +85,15 @@ function LoginPage() {
                 Sign in with Github
               </button>
             </div>
+            <p className="text-sm font-light text-gray-400">
+              Do not have an account?{" "}
+              <a
+                href="/register"
+                className="font-medium text-primary-600 hover:underline"
+              >
+                Register here
+              </a>
+            </p>
           </form>
         </div>
       </div>
