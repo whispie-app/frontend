@@ -13,7 +13,7 @@ function CreateAccount() {
 
   const [error, setError] = useState("");
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target;
     setForm((prev) => ({
       ...prev,
@@ -21,7 +21,7 @@ function CreateAccount() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
 
