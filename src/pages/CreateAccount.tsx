@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Input } from "../components/ui/Input";
+import { Button } from "../components/ui/Button";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "../components/styles/main.css";
@@ -52,70 +54,51 @@ function CreateAccount() {
               <h1 className="text-3xl font-bold items-center align-middle secFont tracking-tight text-[#7b1926]">
                 Create account
               </h1>
+
               {error && (
                 <p className="text-red-500 text-sm font-medium">{error}</p>
               )}
+
               <form
                 className="space-y-4 text-white md:space-y-6"
                 onSubmit={handleSubmit}
               >
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block mb-2 text-sm font-medium text-gray-300"
-                  >
-                    Your email
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    value={form.email}
-                    onChange={handleChange}
-                    required
-                    aria-required="true"
-                    className="bg-gradient-to-l from-[#202020] to-[#161616] border border-[#2c2c2c] text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                    placeholder="name@company.com"
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="password"
-                    className="block mb-2 text-sm font-medium text-gray-300"
-                  >
-                    Password
-                  </label>
-                  <input
-                    type="password"
-                    name="password"
-                    id="password"
-                    value={form.password}
-                    onChange={handleChange}
-                    required
-                    aria-required="true"
-                    placeholder="••••••••"
-                    className="bg-gradient-to-l from-[#202020] to-[#161616] border border-[#2c2c2c] text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="confirmPassword"
-                    className="block mb-2 text-sm font-medium text-gray-300"
-                  >
-                    Confirm password
-                  </label>
-                  <input
-                    type="password"
-                    name="confirmPassword"
-                    id="confirmPassword"
-                    value={form.confirmPassword}
-                    onChange={handleChange}
-                    required
-                    aria-required="true"
-                    placeholder="••••••••"
-                    className="bg-gradient-to-l from-[#202020] to-[#161616] border border-[#2c2c2c] text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                  />
-                </div>
+                <Input
+                  label="Your email"
+                  type="email"
+                  name="email"
+                  id="email"
+                  value={form.email}
+                  onChange={handleChange}
+                  required
+                  aria-required="true"
+                  placeholder="name@company.com"
+                />
+
+                <Input
+                  label="Password"
+                  type="password"
+                  name="password"
+                  id="password"
+                  value={form.password}
+                  onChange={handleChange}
+                  required
+                  aria-required="true"
+                  placeholder="••••••••"
+                />
+
+                <Input
+                  label="Confirm password"
+                  type="password"
+                  name="confirmPassword"
+                  id="confirmPassword"
+                  value={form.confirmPassword}
+                  onChange={handleChange}
+                  required
+                  aria-required="true"
+                  placeholder="••••••••"
+                />
+
                 <div className="flex items-start">
                   <div className="flex items-center h-5">
                     <input
@@ -140,18 +123,25 @@ function CreateAccount() {
                     </a>
                   </label>
                 </div>
-                <button
+
+                <Button
                   type="submit"
                   disabled={isDisabled}
-                  className={`text-white w-full bg-[#7b1926] hover:bg-[#530101] h-10 focus:ring-4 focus:outline-none focus:ring-pink-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center transition ${
-                    isDisabled ? "opacity-50 cursor-not-allowed" : ""
-                  }`}
+                  fullWidth
+                  variant="primary"
                 >
                   Create an account
-                </button>
-                <button
+                </Button>
+
+                <Button
                   type="button"
-                  className="text-white w-full bg-[#24292F] h-10 flex justify-center hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none focus:gray font-medium rounded-lg text-sm px-2 py-2.5 text-center transition"
+                  variant="secondary"
+                  fullWidth
+                  className="justify-center flex"
+                  onClick={() =>
+                    (window.location.href =
+                      "https://github.com/login/oauth/authorize")
+                  }
                 >
                   <svg
                     className="w-4 h-4 me-2"
@@ -161,13 +151,14 @@ function CreateAccount() {
                     viewBox="0 0 20 20"
                   >
                     <path
-                      fill-rule="evenodd"
+                      fillRule="evenodd"
                       d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z"
-                      clip-rule="evenodd"
+                      clipRule="evenodd"
                     />
                   </svg>
                   Sign in with Github
-                </button>
+                </Button>
+
                 <p className="text-sm font-light text-gray-400">
                   Already have an account?{" "}
                   <a
