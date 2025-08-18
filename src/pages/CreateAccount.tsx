@@ -126,9 +126,9 @@ function CreateAccount() {
 
                 <Button
                   type="submit"
+                  variant="primary"
                   disabled={isDisabled}
                   fullWidth
-                  variant="primary"
                 >
                   Create an account
                 </Button>
@@ -137,7 +137,6 @@ function CreateAccount() {
                   type="button"
                   variant="secondary"
                   fullWidth
-                  className="justify-center flex"
                   onClick={() =>
                     (window.location.href =
                       "https://github.com/login/oauth/authorize")
