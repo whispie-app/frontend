@@ -13,7 +13,7 @@ export function Input({ label, ...props }: InputProps) {
       </label>
       <input
         {...props}
-        className="bg-gradient-to-l from-[#202020] to-[#161616] border border-[#2c2c2c] text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+        className="bg-gradient-to-l from-[#202020] placeholder:text-[#707070] to-[#161616] border border-[#2c2c2c] text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
       />
     </div>
   );
